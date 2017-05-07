@@ -1,0 +1,26 @@
+{
+    "pcApp": {
+        "optico" : {
+            "home": {
+                "title": "Opticos",
+                "createLabel": "Créer un nouveau Optico",
+                "createOrEditLabel": "Créer ou éditer un Optico"
+            },
+            "created": "Un nouveau Optico a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Optico avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Optico avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Optico {{ id }} ?"
+            },
+            "detail": {
+                "title": "Optico"
+            },
+            "nombre": "Nombre",
+            "velocidadEscritura": "Velocidad Escritura",
+            "velocidadLectura": "Velocidad Lectura",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

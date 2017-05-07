@@ -1,0 +1,27 @@
+{
+    "pcApp": {
+        "alimentacion" : {
+            "home": {
+                "title": "Alimentacions",
+                "createLabel": "Create a new Alimentacion",
+                "createOrEditLabel": "Create or edit a Alimentacion"
+            },
+            "created": "A new Alimentacion is created with identifier {{ param }}",
+            "updated": "A Alimentacion is updated with identifier {{ param }}",
+            "deleted": "A Alimentacion is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Alimentacion {{ id }}?"
+            },
+            "detail": {
+                "title": "Alimentacion"
+            },
+            "nombre": "Nombre",
+            "potencia": "Potencia",
+            "flujoAire": "Flujo Aire",
+            "conectores": "Conectores",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

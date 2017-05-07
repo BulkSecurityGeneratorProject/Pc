@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="pcApp.optico.detail.title">Optico</span> {{vm.optico.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="pcApp.optico.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.optico.nombre}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.optico.velocidadEscritura">Velocidad Escritura</span></dt>
+        <dd>
+            <span>{{vm.optico.velocidadEscritura}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.optico.velocidadLectura">Velocidad Lectura</span></dt>
+        <dd>
+            <span>{{vm.optico.velocidadLectura}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.optico.precio">Precio</span></dt>
+        <dd>
+            <span>{{vm.optico.precio}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.optico.fabricante">Fabricante</span></dt>
+        <dd>
+            <a ui-sref="fabricante-detail({id:vm.optico.fabricante.id})">{{vm.optico.fabricante.nombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="optico-detail.edit({id:vm.optico.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

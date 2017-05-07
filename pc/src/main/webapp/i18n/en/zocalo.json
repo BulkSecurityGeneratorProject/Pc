@@ -1,0 +1,14 @@
+{
+    "pcApp": {
+        "Zocalo" : {
+            "null": "",
+            "DIP": "DIP",
+            "SIPP": "SIPP",
+            "SIMM30": "SIMM30",
+            "SIMM72": "SIMM72",
+            "DIMM168": "DIMM168",
+            "DIMM184": "DIMM184",
+            "DIMM240": "DIMM240"
+        }
+    }
+}

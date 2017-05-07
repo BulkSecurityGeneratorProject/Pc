@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="pcApp.alimentacion.detail.title">Alimentacion</span> {{vm.alimentacion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="pcApp.alimentacion.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.alimentacion.nombre}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.alimentacion.potencia">Potencia</span></dt>
+        <dd>
+            <span>{{vm.alimentacion.potencia}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.alimentacion.flujoAire">Flujo Aire</span></dt>
+        <dd>
+            <span>{{vm.alimentacion.flujoAire}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.alimentacion.conectores">Conectores</span></dt>
+        <dd>
+            <span>{{vm.alimentacion.conectores}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.alimentacion.precio">Precio</span></dt>
+        <dd>
+            <span>{{vm.alimentacion.precio}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.alimentacion.fabricante">Fabricante</span></dt>
+        <dd>
+            <a ui-sref="fabricante-detail({id:vm.alimentacion.fabricante.id})">{{vm.alimentacion.fabricante.nombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="alimentacion-detail.edit({id:vm.alimentacion.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

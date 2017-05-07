@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySsdLabel" data-translate="pcApp.ssd.home.createOrEditLabel">Create or edit a Ssd</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.ssd.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.ssd.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ssd.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="vm.ssd.nombre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ssd.capacidad" for="field_capacidad">Capacidad</label>
+            <input type="text" class="form-control" name="capacidad" id="field_capacidad"
+                    ng-model="vm.ssd.capacidad"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ssd.precio" for="field_precio">Precio</label>
+            <input type="number" class="form-control" name="precio" id="field_precio"
+                    ng-model="vm.ssd.precio"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="pcApp.ssd.fabricante" for="field_fabricante">Fabricante</label>
+            <select class="form-control" id="field_fabricante" name="fabricante" ng-model="vm.ssd.fabricante" ng-options="fabricante as fabricante.nombre for fabricante in vm.fabricantes track by fabricante.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

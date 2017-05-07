@@ -1,0 +1,25 @@
+{
+    "pcApp": {
+        "ssd" : {
+            "home": {
+                "title": "SSD",
+                "createLabel": "Crear nuevo SSD",
+                "createOrEditLabel": "Crear o editar SSD"
+            },
+            "created": "Un nuevo Ssd ha sido creado con el identificador {{ param }}",
+            "updated": "Un Ssd ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Ssd ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Ssd {{ id }}?"
+            },
+            "detail": {
+                "title": "Ssd"
+            },
+            "nombre": "Nombre",
+            "capacidad": "Capacidad",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

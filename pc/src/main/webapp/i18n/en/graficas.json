@@ -1,0 +1,36 @@
+{
+    "pcApp": {
+        "graficas" : {
+            "home": {
+                "title": "Graficas",
+                "createLabel": "Create a new Graficas",
+                "createOrEditLabel": "Create or edit a Graficas"
+            },
+            "created": "A new Graficas is created with identifier {{ param }}",
+            "updated": "A Graficas is updated with identifier {{ param }}",
+            "deleted": "A Graficas is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Graficas {{ id }}?"
+            },
+            "detail": {
+                "title": "Graficas"
+            },
+            "nombre": "Nombre",
+            "bus": "Bus",
+            "salidas": "Salidas",
+            "refrigeracion": "Refrigeracion",
+            "compatibilidad": "Compatibilidad",
+            "chipset": "Chipset",
+            "valocidad": "Valocidad",
+            "memoria": "Memoria",
+            "ramdac": "Ramdac",
+            "streamProcesor": "Stream Procesor",
+            "shaderClock": "Shader Clock",
+            "pixelRate": "Pixel Rate",
+            "shaderModel": "Shader Model",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

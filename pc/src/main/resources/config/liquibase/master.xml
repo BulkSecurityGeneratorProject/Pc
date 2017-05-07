@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160554_added_entity_Ordenador.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160555_added_entity_Procesador.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160556_added_entity_DiscoDuro.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160557_added_entity_Ram.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160558_added_entity_Ssd.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160559_added_entity_Optico.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160600_added_entity_Graficas.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160601_added_entity_Alimentacion.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160602_added_entity_Placa.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160603_added_entity_Fabricante.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20170507160554_added_entity_constraints_Ordenador.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160555_added_entity_constraints_Procesador.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160556_added_entity_constraints_DiscoDuro.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160557_added_entity_constraints_Ram.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160558_added_entity_constraints_Ssd.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160559_added_entity_constraints_Optico.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160600_added_entity_constraints_Graficas.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160601_added_entity_constraints_Alimentacion.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170507160602_added_entity_constraints_Placa.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

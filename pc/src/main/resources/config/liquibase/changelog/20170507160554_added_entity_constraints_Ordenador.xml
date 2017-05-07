@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Ordenador.
+    -->
+    <changeSet id="20170507160554-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="procesador_id"
+                                 baseTableName="ordenador"
+                                 constraintName="fk_ordenador_procesador_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="procesador"/>
+
+        <addForeignKeyConstraint baseColumnNames="disco_duro_id"
+                                 baseTableName="ordenador"
+                                 constraintName="fk_ordenador_disco_duro_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="disco_duro"/>
+
+        <addForeignKeyConstraint baseColumnNames="memoria_id"
+                                 baseTableName="ordenador"
+                                 constraintName="fk_ordenador_memoria_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ram"/>
+
+        <addForeignKeyConstraint baseColumnNames="ssd_id"
+                                 baseTableName="ordenador"
+                                 constraintName="fk_ordenador_ssd_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ssd"/>
+
+        <addForeignKeyConstraint baseColumnNames="optico_id"
+                                 baseTableName="ordenador"
+                                 constraintName="fk_ordenador_optico_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="optico"/>
+
+        <addForeignKeyConstraint baseColumnNames="graficas_id"
+                                 baseTableName="ordenador"
+                                 constraintName="fk_ordenador_graficas_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="graficas"/>
+
+        <addForeignKeyConstraint baseColumnNames="alimentacion_id"
+                                 baseTableName="ordenador"
+                                 constraintName="fk_ordenador_alimentacion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="alimentacion"/>
+
+        <addForeignKeyConstraint baseColumnNames="disipador_id"
+                                 baseTableName="ordenador"
+                                 constraintName="fk_ordenador_disipador_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="placa"/>
+
+    </changeSet>
+</databaseChangeLog>

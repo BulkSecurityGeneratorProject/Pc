@@ -1,0 +1,29 @@
+{
+    "pcApp": {
+        "fabricante" : {
+            "home": {
+                "title": "Fabricantes",
+                "createLabel": "Crear nuevo Fabricante",
+                "createOrEditLabel": "Crear o editar Fabricante"
+            },
+            "created": "Un nuevo Fabricante ha sido creado con el identificador {{ param }}",
+            "updated": "Un Fabricante ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Fabricante ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Fabricante {{ id }}?"
+            },
+            "detail": {
+                "title": "Fabricante"
+            },
+            "nombre": "Nombre",
+            "discoDuro": "Disco Duro",
+            "ram": "Ram",
+            "graficas": "Graficas",
+            "alimentacion": "Alimentacion",
+            "ssd": "Ssd",
+            "optico": "Optico",
+            "placa": "Placa",
+            "procesador": "Procesador"
+        }
+    }
+}

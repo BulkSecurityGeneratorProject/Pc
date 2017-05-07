@@ -1,0 +1,92 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myRamLabel" data-translate="pcApp.ram.home.createOrEditLabel">Create or edit a Ram</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.ram.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.ram.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="vm.ram.nombre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.capacidad" for="field_capacidad">Capacidad</label>
+            <input type="text" class="form-control" name="capacidad" id="field_capacidad"
+                    ng-model="vm.ram.capacidad"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.anchoDanda" for="field_anchoDanda">Ancho Danda</label>
+            <input type="text" class="form-control" name="anchoDanda" id="field_anchoDanda"
+                    ng-model="vm.ram.anchoDanda"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.frecuencia" for="field_frecuencia">Frecuencia</label>
+            <input type="text" class="form-control" name="frecuencia" id="field_frecuencia"
+                    ng-model="vm.ram.frecuencia"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.tiempoAcceso" for="field_tiempoAcceso">Tiempo Acceso</label>
+            <input type="text" class="form-control" name="tiempoAcceso" id="field_tiempoAcceso"
+                    ng-model="vm.ram.tiempoAcceso"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.latencia" for="field_latencia">Latencia</label>
+            <input type="text" class="form-control" name="latencia" id="field_latencia"
+                    ng-model="vm.ram.latencia"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.conectores" for="field_conectores">Conectores</label>
+            <input type="text" class="form-control" name="conectores" id="field_conectores"
+                    ng-model="vm.ram.conectores"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.zocalo" for="field_zocalo">Zocalo</label>
+            <select class="form-control" name="zocalo" ng-model="vm.ram.zocalo" id="field_zocalo">
+                <option value="DIP" data-translate="pcApp.Zocalo.DIP">DIP</option>
+                <option value="SIPP" data-translate="pcApp.Zocalo.SIPP">SIPP</option>
+                <option value="SIMM30" data-translate="pcApp.Zocalo.SIMM30">SIMM30</option>
+                <option value="SIMM72" data-translate="pcApp.Zocalo.SIMM72">SIMM72</option>
+                <option value="DIMM168" data-translate="pcApp.Zocalo.DIMM168">DIMM168</option>
+                <option value="DIMM184" data-translate="pcApp.Zocalo.DIMM184">DIMM184</option>
+                <option value="DIMM240" data-translate="pcApp.Zocalo.DIMM240">DIMM240</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ram.precio" for="field_precio">Precio</label>
+            <input type="number" class="form-control" name="precio" id="field_precio"
+                    ng-model="vm.ram.precio"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="pcApp.ram.fabricante" for="field_fabricante">Fabricante</label>
+            <select class="form-control" id="field_fabricante" name="fabricante" ng-model="vm.ram.fabricante" ng-options="fabricante as fabricante.nombre for fabricante in vm.fabricantes track by fabricante.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

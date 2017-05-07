@@ -1,0 +1,66 @@
+<div>
+    <h2 data-translate="pcApp.optico.home.title">Opticos</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button has-authority="ROLE_ADMIN" class="btn btn-primary" ui-sref="optico.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="pcApp.optico.home.createLabel">
+                        Create new Optico
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="pcApp.optico.nombre">Nombre</span></th>
+                    <th><span data-translate="pcApp.optico.velocidadEscritura">Velocidad Escritura</span></th>
+                    <th><span data-translate="pcApp.optico.velocidadLectura">Velocidad Lectura</span></th>
+                    <th><span data-translate="pcApp.optico.precio">Precio</span></th>
+                    <th><span data-translate="pcApp.optico.fabricante">Fabricante</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="optico in vm.opticos track by optico.id">
+                    <td><a ui-sref="optico-detail({id:optico.id})">{{optico.id}}</a></td>
+                    <td>{{optico.nombre}}</td>
+                    <td>{{optico.velocidadEscritura}}</td>
+                    <td>{{optico.velocidadLectura}}</td>
+                    <td>{{optico.precio}}</td>
+                    <td>
+                        <a ui-sref="fabricante-detail({id:optico.fabricante.id})">{{optico.fabricante.nombre}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="optico-detail({id:optico.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button has-authority="ROLE_ADMIN" type="submit"
+                                    ui-sref="optico.edit({id:optico.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button has-authority="ROLE_ADMIN" type="submit"
+                                    ui-sref="optico.delete({id:optico.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

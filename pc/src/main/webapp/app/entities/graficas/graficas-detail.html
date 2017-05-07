@@ -1,0 +1,79 @@
+
+<div>
+    <h2><span data-translate="pcApp.graficas.detail.title">Graficas</span> {{vm.graficas.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="pcApp.graficas.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.graficas.nombre}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.bus">Bus</span></dt>
+        <dd>
+            <span>{{vm.graficas.bus}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.salidas">Salidas</span></dt>
+        <dd>
+            <span>{{vm.graficas.salidas}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.refrigeracion">Refrigeracion</span></dt>
+        <dd>
+            <span>{{vm.graficas.refrigeracion}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.compatibilidad">Compatibilidad</span></dt>
+        <dd>
+            <span>{{vm.graficas.compatibilidad}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.chipset">Chipset</span></dt>
+        <dd>
+            <span>{{vm.graficas.chipset}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.valocidad">Valocidad</span></dt>
+        <dd>
+            <span>{{vm.graficas.valocidad}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.memoria">Memoria</span></dt>
+        <dd>
+            <span>{{vm.graficas.memoria}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.ramdac">Ramdac</span></dt>
+        <dd>
+            <span>{{vm.graficas.ramdac}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.streamProcesor">Stream Procesor</span></dt>
+        <dd>
+            <span>{{vm.graficas.streamProcesor}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.shaderClock">Shader Clock</span></dt>
+        <dd>
+            <span>{{vm.graficas.shaderClock}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.pixelRate">Pixel Rate</span></dt>
+        <dd>
+            <span>{{vm.graficas.pixelRate}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.shaderModel">Shader Model</span></dt>
+        <dd>
+            <span>{{vm.graficas.shaderModel}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.precio">Precio</span></dt>
+        <dd>
+            <span>{{vm.graficas.precio}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.graficas.fabricante">Fabricante</span></dt>
+        <dd>
+            <a ui-sref="fabricante-detail({id:vm.graficas.fabricante.id})">{{vm.graficas.fabricante.nombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="graficas-detail.edit({id:vm.graficas.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

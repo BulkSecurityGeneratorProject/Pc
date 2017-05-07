@@ -1,0 +1,61 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ordenador",
+            "otherEntityName": "ordenador",
+            "otherEntityRelationshipName": "memoria"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fabricante",
+            "otherEntityName": "fabricante",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "capacidad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "anchoDanda",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "frecuencia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tiempoAcceso",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "latencia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "conectores",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zocalo",
+            "fieldType": "Zocalo",
+            "fieldValues": "DIP,SIPP,SIMM30,SIMM72,DIMM168,DIMM184,DIMM240"
+        },
+        {
+            "fieldName": "precio",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170507160557",
+    "entityTableName": "ram",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

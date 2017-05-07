@@ -1,0 +1,62 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ordenador",
+            "otherEntityName": "ordenador",
+            "otherEntityRelationshipName": "disipador"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fabricante",
+            "otherEntityName": "fabricante",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tipo",
+            "fieldType": "Tipo",
+            "fieldValues": "AX,AT,BABYAT,ATX,FLEXATX,MICROATX,MINIATX,ITX,BTX,MICROBTX,FULLDTX"
+        },
+        {
+            "fieldName": "procesadores",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "memoria",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pci",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "socket",
+            "fieldType": "Socket",
+            "fieldValues": "LGA1156,LGA1366,AMD,AM2"
+        },
+        {
+            "fieldName": "almacenamiento",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bios",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "precio",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170507160602",
+    "entityTableName": "placa",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

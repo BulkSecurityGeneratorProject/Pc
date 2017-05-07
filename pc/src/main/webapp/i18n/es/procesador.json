@@ -1,0 +1,29 @@
+{
+    "pcApp": {
+        "procesador" : {
+            "home": {
+                "title": "Procesadors",
+                "createLabel": "Crear nuevo Procesador",
+                "createOrEditLabel": "Crear o editar Procesador"
+            },
+            "created": "Un nuevo Procesador ha sido creado con el identificador {{ param }}",
+            "updated": "Un Procesador ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Procesador ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Procesador {{ id }}?"
+            },
+            "detail": {
+                "title": "Procesador"
+            },
+            "nombreProcesador": "Nombre Procesador",
+            "memoria": "Memoria",
+            "nucleos": "Nucleos",
+            "ghz": "Ghz",
+            "velocidad": "Velocidad",
+            "socket": "Socket",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "pcApp": {
+        "alimentacion" : {
+            "home": {
+                "title": "Fuente de Alimentacion",
+                "createLabel": "Crear nueva Alimentacion",
+                "createOrEditLabel": "Crear o editar Alimentacion"
+            },
+            "created": "Un nuevo Alimentacion ha sido creado con el identificador {{ param }}",
+            "updated": "Un Alimentacion ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Alimentacion ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Alimentacion {{ id }}?"
+            },
+            "detail": {
+                "title": "Alimentacion"
+            },
+            "nombre": "Nombre",
+            "potencia": "Potencia",
+            "flujoAire": "Flujo Aire",
+            "conectores": "Conectores",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

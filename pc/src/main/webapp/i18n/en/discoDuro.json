@@ -1,0 +1,28 @@
+{
+    "pcApp": {
+        "discoDuro" : {
+            "home": {
+                "title": "Disco Duros",
+                "createLabel": "Create a new Disco Duro",
+                "createOrEditLabel": "Create or edit a Disco Duro"
+            },
+            "created": "A new Disco Duro is created with identifier {{ param }}",
+            "updated": "A Disco Duro is updated with identifier {{ param }}",
+            "deleted": "A Disco Duro is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Disco Duro {{ id }}?"
+            },
+            "detail": {
+                "title": "Disco Duro"
+            },
+            "nombre": "Nombre",
+            "capacidad": "Capacidad",
+            "tamano": "Tamano",
+            "tiempoAcceso": "Tiempo Acceso",
+            "tasaTransferencia": "Tasa Transferencia",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

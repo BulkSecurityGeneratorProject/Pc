@@ -1,0 +1,68 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "procesador",
+            "otherEntityName": "procesador",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "discoDuro",
+            "otherEntityName": "discoDuro",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "memoria",
+            "otherEntityName": "ram",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "ssd",
+            "otherEntityName": "ssd",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "optico",
+            "otherEntityName": "optico",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "graficas",
+            "otherEntityName": "graficas",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "alimentacion",
+            "otherEntityName": "alimentacion",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "disipador",
+            "otherEntityName": "placa",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "observaciones",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "precio",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170507160554",
+    "entityTableName": "ordenador",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

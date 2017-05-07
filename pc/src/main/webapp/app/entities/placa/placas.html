@@ -1,0 +1,76 @@
+<div>
+    <h2 data-translate="pcApp.placa.home.title">Placas</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button has-authority="ROLE_ADMIN" class="btn btn-primary" ui-sref="placa.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="pcApp.placa.home.createLabel">
+                        Create new Placa
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="pcApp.placa.nombre">Nombre</span></th>
+                    <th><span data-translate="pcApp.placa.tipo">Tipo</span></th>
+                    <th><span data-translate="pcApp.placa.procesadores">Procesadores</span></th>
+                    <th><span data-translate="pcApp.placa.memoria">Memoria</span></th>
+                    <th><span data-translate="pcApp.placa.pci">Pci</span></th>
+                    <th><span data-translate="pcApp.placa.socket">Socket</span></th>
+                    <th><span data-translate="pcApp.placa.almacenamiento">Almacenamiento</span></th>
+                    <th><span data-translate="pcApp.placa.bios">Bios</span></th>
+                    <th><span data-translate="pcApp.placa.precio">Precio</span></th>
+                    <th><span data-translate="pcApp.placa.fabricante">Fabricante</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="placa in vm.placas track by placa.id">
+                    <td><a ui-sref="placa-detail({id:placa.id})">{{placa.id}}</a></td>
+                    <td>{{placa.nombre}}</td>
+                    <td data-translate="{{'pcApp.Tipo.' + placa.tipo}}">{{placa.tipo}}</td>
+                    <td>{{placa.procesadores}}</td>
+                    <td>{{placa.memoria}}</td>
+                    <td>{{placa.pci}}</td>
+                    <td data-translate="{{'pcApp.Socket.' + placa.socket}}">{{placa.socket}}</td>
+                    <td>{{placa.almacenamiento}}</td>
+                    <td>{{placa.bios}}</td>
+                    <td>{{placa.precio}}</td>
+                    <td>
+                        <a ui-sref="fabricante-detail({id:placa.fabricante.id})">{{placa.fabricante.nombre}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="placa-detail({id:placa.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button has-authority="ROLE_ADMIN" type="submit"
+                                    ui-sref="placa.edit({id:placa.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button has-authority="ROLE_ADMIN" type="submit"
+                                    ui-sref="placa.delete({id:placa.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

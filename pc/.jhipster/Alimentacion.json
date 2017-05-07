@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ordenador",
+            "otherEntityName": "ordenador",
+            "otherEntityRelationshipName": "alimentacion"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fabricante",
+            "otherEntityName": "fabricante",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "potencia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "flujoAire",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "conectores",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "precio",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170507160601",
+    "entityTableName": "alimentacion",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

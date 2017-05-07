@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="pcApp.procesador.detail.title">Procesador</span> {{vm.procesador.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="pcApp.procesador.nombreProcesador">Nombre Procesador</span></dt>
+        <dd>
+            <span>{{vm.procesador.nombreProcesador}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.procesador.memoria">Memoria</span></dt>
+        <dd>
+            <span>{{vm.procesador.memoria}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.procesador.nucleos">Nucleos</span></dt>
+        <dd>
+            <span>{{vm.procesador.nucleos}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.procesador.ghz">Ghz</span></dt>
+        <dd>
+            <span>{{vm.procesador.ghz}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.procesador.velocidad">Velocidad</span></dt>
+        <dd>
+            <span>{{vm.procesador.velocidad}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.procesador.socket">Socket</span></dt>
+        <dd>
+            <span data-translate="{{'pcApp.Socket.' + vm.procesador.socket}}">{{vm.procesador.socket}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.procesador.precio">Precio</span></dt>
+        <dd>
+            <span>{{vm.procesador.precio}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.procesador.fabricante">Fabricante</span></dt>
+        <dd>
+            <a ui-sref="fabricante-detail({id:vm.procesador.fabricante.id})">{{vm.procesador.fabricante.nombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="procesador-detail.edit({id:vm.procesador.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

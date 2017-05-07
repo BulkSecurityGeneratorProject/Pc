@@ -1,0 +1,77 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProcesadorLabel" data-translate="pcApp.procesador.home.createOrEditLabel">Create or edit a Procesador</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.procesador.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.procesador.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.procesador.nombreProcesador" for="field_nombreProcesador">Nombre Procesador</label>
+            <input type="text" class="form-control" name="nombreProcesador" id="field_nombreProcesador"
+                    ng-model="vm.procesador.nombreProcesador"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.procesador.memoria" for="field_memoria">Memoria</label>
+            <input type="text" class="form-control" name="memoria" id="field_memoria"
+                    ng-model="vm.procesador.memoria"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.procesador.nucleos" for="field_nucleos">Nucleos</label>
+            <input type="number" class="form-control" name="nucleos" id="field_nucleos"
+                    ng-model="vm.procesador.nucleos"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.procesador.ghz" for="field_ghz">Ghz</label>
+            <input type="text" class="form-control" name="ghz" id="field_ghz"
+                    ng-model="vm.procesador.ghz"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.procesador.velocidad" for="field_velocidad">Velocidad</label>
+            <input type="text" class="form-control" name="velocidad" id="field_velocidad"
+                    ng-model="vm.procesador.velocidad"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.procesador.socket" for="field_socket">Socket</label>
+            <select class="form-control" name="socket" ng-model="vm.procesador.socket" id="field_socket">
+                <option value="LGA1156" data-translate="pcApp.Socket.LGA1156">LGA1156</option>
+                <option value="LGA1366" data-translate="pcApp.Socket.LGA1366">LGA1366</option>
+                <option value="AMD" data-translate="pcApp.Socket.AMD">AMD</option>
+                <option value="AM2" data-translate="pcApp.Socket.AM2">AM2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.procesador.precio" for="field_precio">Precio</label>
+            <input type="number" class="form-control" name="precio" id="field_precio"
+                    ng-model="vm.procesador.precio"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="pcApp.procesador.fabricante" for="field_fabricante">Fabricante</label>
+            <select class="form-control" id="field_fabricante" name="fabricante" ng-model="vm.procesador.fabricante" ng-options="fabricante as fabricante.nombre for fabricante in vm.fabricantes track by fabricante.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

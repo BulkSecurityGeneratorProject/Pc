@@ -1,0 +1,64 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "discoDuro",
+            "otherEntityName": "discoDuro",
+            "otherEntityRelationshipName": "fabricante"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ram",
+            "otherEntityName": "ram",
+            "otherEntityRelationshipName": "fabricante"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "graficas",
+            "otherEntityName": "graficas",
+            "otherEntityRelationshipName": "fabricante"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "alimentacion",
+            "otherEntityName": "alimentacion",
+            "otherEntityRelationshipName": "fabricante"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ssd",
+            "otherEntityName": "ssd",
+            "otherEntityRelationshipName": "fabricante"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "optico",
+            "otherEntityName": "optico",
+            "otherEntityRelationshipName": "fabricante"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "placa",
+            "otherEntityName": "placa",
+            "otherEntityRelationshipName": "fabricante"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "procesador",
+            "otherEntityName": "procesador",
+            "otherEntityRelationshipName": "fabricante"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170507160603",
+    "entityTableName": "fabricante",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

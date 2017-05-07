@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ordenador",
+            "otherEntityName": "ordenador",
+            "otherEntityRelationshipName": "discoDuro"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fabricante",
+            "otherEntityName": "fabricante",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "capacidad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tamano",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tiempoAcceso",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tasaTransferencia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "precio",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170507160556",
+    "entityTableName": "disco_duro",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

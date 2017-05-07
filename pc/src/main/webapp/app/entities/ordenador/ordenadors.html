@@ -1,0 +1,90 @@
+<div>
+    <h2 data-translate="pcApp.ordenador.home.title">Ordenadors</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="ordenador.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="pcApp.ordenador.home.createLabel">
+                        Create new Ordenador
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="pcApp.ordenador.observaciones">Observaciones</span></th>
+                    <th><span data-translate="pcApp.ordenador.precio">Precio</span></th>
+                    <th><span data-translate="pcApp.ordenador.procesador">Procesador</span></th>
+                    <th><span data-translate="pcApp.ordenador.discoDuro">Disco Duro</span></th>
+                    <th><span data-translate="pcApp.ordenador.memoria">Memoria</span></th>
+                    <th><span data-translate="pcApp.ordenador.ssd">Ssd</span></th>
+                    <th><span data-translate="pcApp.ordenador.optico">Optico</span></th>
+                    <th><span data-translate="pcApp.ordenador.graficas">Graficas</span></th>
+                    <th><span data-translate="pcApp.ordenador.alimentacion">Alimentacion</span></th>
+                    <th><span data-translate="pcApp.ordenador.disipador">Disipador</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ordenador in vm.ordenadors track by ordenador.id">
+                    <td><a ui-sref="ordenador-detail({id:ordenador.id})">{{ordenador.id}}</a></td>
+                    <td>{{ordenador.observaciones}}</td>
+                    <td>{{ordenador.precio}}</td>
+                    <td>
+                        <a ui-sref="procesador-detail({id:ordenador.procesador.id})">{{ordenador.procesador.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="disco-duro-detail({id:ordenador.discoDuro.id})">{{ordenador.discoDuro.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="ram-detail({id:ordenador.memoria.id})">{{ordenador.memoria.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="ssd-detail({id:ordenador.ssd.id})">{{ordenador.ssd.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="optico-detail({id:ordenador.optico.id})">{{ordenador.optico.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="graficas-detail({id:ordenador.graficas.id})">{{ordenador.graficas.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="alimentacion-detail({id:ordenador.alimentacion.id})">{{ordenador.alimentacion.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="placa-detail({id:ordenador.disipador.id})">{{ordenador.disipador.nombre}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="ordenador-detail({id:ordenador.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="ordenador.edit({id:ordenador.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="ordenador.delete({id:ordenador.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

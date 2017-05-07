@@ -1,0 +1,36 @@
+{
+    "pcApp": {
+        "graficas" : {
+            "home": {
+                "title": "Tarjeta Grafica",
+                "createLabel": "Crear nueva Tarjeta Grafica",
+                "createOrEditLabel": "Crear o editar Tarjeta Grafica"
+            },
+            "created": "Un nuevo Graficas ha sido creado con el identificador {{ param }}",
+            "updated": "Un Graficas ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Graficas ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Graficas {{ id }}?"
+            },
+            "detail": {
+                "title": "Graficas"
+            },
+            "nombre": "Nombre",
+            "bus": "Bus",
+            "salidas": "Salidas",
+            "refrigeracion": "Refrigeracion",
+            "compatibilidad": "Compatibilidad",
+            "chipset": "Chipset",
+            "valocidad": "Valocidad",
+            "memoria": "Memoria",
+            "ramdac": "Ramdac",
+            "streamProcesor": "Stream Procesor",
+            "shaderClock": "Shader Clock",
+            "pixelRate": "Pixel Rate",
+            "shaderModel": "Shader Model",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

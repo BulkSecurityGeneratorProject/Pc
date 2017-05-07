@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="pcApp.discoDuro.detail.title">Disco Duro</span> {{vm.discoDuro.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="pcApp.discoDuro.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.discoDuro.nombre}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.discoDuro.capacidad">Capacidad</span></dt>
+        <dd>
+            <span>{{vm.discoDuro.capacidad}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.discoDuro.tamano">Tamano</span></dt>
+        <dd>
+            <span>{{vm.discoDuro.tamano}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.discoDuro.tiempoAcceso">Tiempo Acceso</span></dt>
+        <dd>
+            <span>{{vm.discoDuro.tiempoAcceso}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.discoDuro.tasaTransferencia">Tasa Transferencia</span></dt>
+        <dd>
+            <span>{{vm.discoDuro.tasaTransferencia}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.discoDuro.precio">Precio</span></dt>
+        <dd>
+            <span>{{vm.discoDuro.precio}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.discoDuro.fabricante">Fabricante</span></dt>
+        <dd>
+            <a ui-sref="fabricante-detail({id:vm.discoDuro.fabricante.id})">{{vm.discoDuro.fabricante.nombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="disco-duro-detail.edit({id:vm.discoDuro.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

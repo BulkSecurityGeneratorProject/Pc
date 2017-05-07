@@ -1,0 +1,11 @@
+{
+    "pcApp": {
+        "Socket" : {
+            "null": "",
+            "LGA1156": "LGA1156",
+            "LGA1366": "LGA1366",
+            "AMD": "AMD",
+            "AM2": "AM2"
+        }
+    }
+}

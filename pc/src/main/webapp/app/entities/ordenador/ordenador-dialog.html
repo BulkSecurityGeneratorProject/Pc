@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOrdenadorLabel" data-translate="pcApp.ordenador.home.createOrEditLabel">Create or edit a Ordenador</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.ordenador.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.ordenador.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ordenador.observaciones" for="field_observaciones">Observaciones</label>
+            <input type="text" class="form-control" name="observaciones" id="field_observaciones"
+                    ng-model="vm.ordenador.observaciones"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.ordenador.precio" for="field_precio">Precio</label>
+            <input type="number" class="form-control" name="precio" id="field_precio"
+                    ng-model="vm.ordenador.precio"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="pcApp.ordenador.procesador" for="field_procesador">Procesador</label>
+            <select class="form-control" id="field_procesador" name="procesador" ng-model="vm.ordenador.procesador" ng-options="procesador as procesador.nombre for procesador in vm.procesadors track by procesador.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="pcApp.ordenador.discoDuro" for="field_discoDuro">Disco Duro</label>
+            <select class="form-control" id="field_discoDuro" name="discoDuro" ng-model="vm.ordenador.discoDuro" ng-options="discoDuro as discoDuro.nombre for discoDuro in vm.discoduros track by discoDuro.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="pcApp.ordenador.memoria" for="field_memoria">Memoria</label>
+            <select class="form-control" id="field_memoria" name="memoria" ng-model="vm.ordenador.memoria" ng-options="ram as ram.nombre for ram in vm.rams track by ram.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="pcApp.ordenador.ssd" for="field_ssd">Ssd</label>
+            <select class="form-control" id="field_ssd" name="ssd" ng-model="vm.ordenador.ssd" ng-options="ssd as ssd.nombre for ssd in vm.ssds track by ssd.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="pcApp.ordenador.optico" for="field_optico">Optico</label>
+            <select class="form-control" id="field_optico" name="optico" ng-model="vm.ordenador.optico" ng-options="optico as optico.nombre for optico in vm.opticos track by optico.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="pcApp.ordenador.graficas" for="field_graficas">Graficas</label>
+            <select class="form-control" id="field_graficas" name="graficas" ng-model="vm.ordenador.graficas" ng-options="graficas as graficas.nombre for graficas in vm.graficas track by graficas.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="pcApp.ordenador.alimentacion" for="field_alimentacion">Alimentacion</label>
+            <select class="form-control" id="field_alimentacion" name="alimentacion" ng-model="vm.ordenador.alimentacion" ng-options="alimentacion as alimentacion.nombre for alimentacion in vm.alimentacions track by alimentacion.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="pcApp.ordenador.disipador" for="field_disipador">Disipador</label>
+            <select class="form-control" id="field_disipador" name="disipador" ng-model="vm.ordenador.disipador" ng-options="placa as placa.nombre for placa in vm.placas track by placa.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

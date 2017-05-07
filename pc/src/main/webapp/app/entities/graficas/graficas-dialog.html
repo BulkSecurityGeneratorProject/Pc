@@ -1,0 +1,116 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myGraficasLabel" data-translate="pcApp.graficas.home.createOrEditLabel">Create or edit a Graficas</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.graficas.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.graficas.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="vm.graficas.nombre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.bus" for="field_bus">Bus</label>
+            <input type="text" class="form-control" name="bus" id="field_bus"
+                    ng-model="vm.graficas.bus"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.salidas" for="field_salidas">Salidas</label>
+            <input type="text" class="form-control" name="salidas" id="field_salidas"
+                    ng-model="vm.graficas.salidas"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.refrigeracion" for="field_refrigeracion">Refrigeracion</label>
+            <input type="text" class="form-control" name="refrigeracion" id="field_refrigeracion"
+                    ng-model="vm.graficas.refrigeracion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.compatibilidad" for="field_compatibilidad">Compatibilidad</label>
+            <input type="text" class="form-control" name="compatibilidad" id="field_compatibilidad"
+                    ng-model="vm.graficas.compatibilidad"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.chipset" for="field_chipset">Chipset</label>
+            <input type="text" class="form-control" name="chipset" id="field_chipset"
+                    ng-model="vm.graficas.chipset"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.valocidad" for="field_valocidad">Valocidad</label>
+            <input type="text" class="form-control" name="valocidad" id="field_valocidad"
+                    ng-model="vm.graficas.valocidad"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.memoria" for="field_memoria">Memoria</label>
+            <input type="text" class="form-control" name="memoria" id="field_memoria"
+                    ng-model="vm.graficas.memoria"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.ramdac" for="field_ramdac">Ramdac</label>
+            <input type="text" class="form-control" name="ramdac" id="field_ramdac"
+                    ng-model="vm.graficas.ramdac"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.streamProcesor" for="field_streamProcesor">Stream Procesor</label>
+            <input type="text" class="form-control" name="streamProcesor" id="field_streamProcesor"
+                    ng-model="vm.graficas.streamProcesor"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.shaderClock" for="field_shaderClock">Shader Clock</label>
+            <input type="text" class="form-control" name="shaderClock" id="field_shaderClock"
+                    ng-model="vm.graficas.shaderClock"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.pixelRate" for="field_pixelRate">Pixel Rate</label>
+            <input type="text" class="form-control" name="pixelRate" id="field_pixelRate"
+                    ng-model="vm.graficas.pixelRate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.shaderModel" for="field_shaderModel">Shader Model</label>
+            <input type="text" class="form-control" name="shaderModel" id="field_shaderModel"
+                    ng-model="vm.graficas.shaderModel"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.graficas.precio" for="field_precio">Precio</label>
+            <input type="number" class="form-control" name="precio" id="field_precio"
+                    ng-model="vm.graficas.precio"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="pcApp.graficas.fabricante" for="field_fabricante">Fabricante</label>
+            <select class="form-control" id="field_fabricante" name="fabricante" ng-model="vm.graficas.fabricante" ng-options="fabricante as fabricante.nombre for fabricante in vm.fabricantes track by fabricante.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

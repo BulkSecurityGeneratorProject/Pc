@@ -1,0 +1,25 @@
+{
+    "pcApp": {
+        "ssd" : {
+            "home": {
+                "title": "Ssds",
+                "createLabel": "Créer un nouveau Ssd",
+                "createOrEditLabel": "Créer ou éditer un Ssd"
+            },
+            "created": "Un nouveau Ssd a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Ssd avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Ssd avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Ssd {{ id }} ?"
+            },
+            "detail": {
+                "title": "Ssd"
+            },
+            "nombre": "Nombre",
+            "capacidad": "Capacidad",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

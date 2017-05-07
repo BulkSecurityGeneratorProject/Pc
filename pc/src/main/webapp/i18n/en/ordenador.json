@@ -1,0 +1,30 @@
+{
+    "pcApp": {
+        "ordenador" : {
+            "home": {
+                "title": "Ordenadors",
+                "createLabel": "Create a new Ordenador",
+                "createOrEditLabel": "Create or edit a Ordenador"
+            },
+            "created": "A new Ordenador is created with identifier {{ param }}",
+            "updated": "A Ordenador is updated with identifier {{ param }}",
+            "deleted": "A Ordenador is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Ordenador {{ id }}?"
+            },
+            "detail": {
+                "title": "Ordenador"
+            },
+            "observaciones": "Observaciones",
+            "precio": "Precio",
+            "procesador": "Procesador",
+            "discoDuro": "Disco Duro",
+            "memoria": "Memoria",
+            "ssd": "Ssd",
+            "optico": "Optico",
+            "graficas": "Graficas",
+            "alimentacion": "Alimentacion",
+            "disipador": "Disipador"
+        }
+    }
+}

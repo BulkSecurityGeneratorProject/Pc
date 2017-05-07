@@ -1,0 +1,53 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ordenador",
+            "otherEntityName": "ordenador",
+            "otherEntityRelationshipName": "procesador"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fabricante",
+            "otherEntityName": "fabricante",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombreProcesador",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "memoria",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nucleos",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ghz",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "velocidad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "socket",
+            "fieldType": "Socket",
+            "fieldValues": "LGA1156,LGA1366,AMD,AM2"
+        },
+        {
+            "fieldName": "precio",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170507160555",
+    "entityTableName": "procesador",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

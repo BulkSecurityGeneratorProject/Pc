@@ -1,0 +1,30 @@
+{
+    "pcApp": {
+        "ordenador" : {
+            "home": {
+                "title": "Ordenador",
+                "createLabel": "Configura tu ordenador aqui",
+                "createOrEditLabel": "Crear o editar Ordenador"
+            },
+            "created": "Un nuevo Ordenador ha sido creado con el identificador {{ param }}",
+            "updated": "Un Ordenador ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Ordenador ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Ordenador {{ id }}?"
+            },
+            "detail": {
+                "title": "Ordenador"
+            },
+            "observaciones": "Observaciones",
+            "precio": "Precio",
+            "procesador": "Procesador",
+            "discoDuro": "Disco Duro",
+            "memoria": "Memoria",
+            "ssd": "Ssd",
+            "optico": "Optico",
+            "graficas": "Graficas",
+            "alimentacion": "Alimentacion",
+            "disipador": "Disipador"
+        }
+    }
+}

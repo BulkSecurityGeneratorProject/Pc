@@ -1,0 +1,31 @@
+{
+    "pcApp": {
+        "placa" : {
+            "home": {
+                "title": "Placas",
+                "createLabel": "Create a new Placa",
+                "createOrEditLabel": "Create or edit a Placa"
+            },
+            "created": "A new Placa is created with identifier {{ param }}",
+            "updated": "A Placa is updated with identifier {{ param }}",
+            "deleted": "A Placa is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Placa {{ id }}?"
+            },
+            "detail": {
+                "title": "Placa"
+            },
+            "nombre": "Nombre",
+            "tipo": "Tipo",
+            "procesadores": "Procesadores",
+            "memoria": "Memoria",
+            "pci": "Pci",
+            "socket": "Socket",
+            "almacenamiento": "Almacenamiento",
+            "bios": "Bios",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

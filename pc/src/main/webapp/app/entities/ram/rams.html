@@ -1,0 +1,76 @@
+<div>
+    <h2 data-translate="pcApp.ram.home.title">Rams</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button has-authority="ROLE_ADMIN" class="btn btn-primary" ui-sref="ram.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="pcApp.ram.home.createLabel">
+                        Create new Ram
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="pcApp.ram.nombre">Nombre</span></th>
+                    <th><span data-translate="pcApp.ram.capacidad">Capacidad</span></th>
+                    <th><span data-translate="pcApp.ram.anchoDanda">Ancho Danda</span></th>
+                    <th><span data-translate="pcApp.ram.frecuencia">Frecuencia</span></th>
+                    <th><span data-translate="pcApp.ram.tiempoAcceso">Tiempo Acceso</span></th>
+                    <th><span data-translate="pcApp.ram.latencia">Latencia</span></th>
+                    <th><span data-translate="pcApp.ram.conectores">Conectores</span></th>
+                    <th><span data-translate="pcApp.ram.zocalo">Zocalo</span></th>
+                    <th><span data-translate="pcApp.ram.precio">Precio</span></th>
+                    <th><span data-translate="pcApp.ram.fabricante">Fabricante</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ram in vm.rams track by ram.id">
+                    <td><a ui-sref="ram-detail({id:ram.id})">{{ram.id}}</a></td>
+                    <td>{{ram.nombre}}</td>
+                    <td>{{ram.capacidad}}</td>
+                    <td>{{ram.anchoDanda}}</td>
+                    <td>{{ram.frecuencia}}</td>
+                    <td>{{ram.tiempoAcceso}}</td>
+                    <td>{{ram.latencia}}</td>
+                    <td>{{ram.conectores}}</td>
+                    <td data-translate="{{'pcApp.Zocalo.' + ram.zocalo}}">{{ram.zocalo}}</td>
+                    <td>{{ram.precio}}</td>
+                    <td>
+                        <a ui-sref="fabricante-detail({id:ram.fabricante.id})">{{ram.fabricante.nombre}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="ram-detail({id:ram.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button has-authority="ROLE_ADMIN" type="submit"
+                                    ui-sref="ram.edit({id:ram.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button has-authority="ROLE_ADMIN" type="submit"
+                                    ui-sref="ram.delete({id:ram.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

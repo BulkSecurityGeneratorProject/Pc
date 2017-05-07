@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span data-translate="pcApp.placa.detail.title">Placa</span> {{vm.placa.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="pcApp.placa.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.placa.nombre}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.tipo">Tipo</span></dt>
+        <dd>
+            <span data-translate="{{'pcApp.Tipo.' + vm.placa.tipo}}">{{vm.placa.tipo}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.procesadores">Procesadores</span></dt>
+        <dd>
+            <span>{{vm.placa.procesadores}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.memoria">Memoria</span></dt>
+        <dd>
+            <span>{{vm.placa.memoria}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.pci">Pci</span></dt>
+        <dd>
+            <span>{{vm.placa.pci}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.socket">Socket</span></dt>
+        <dd>
+            <span data-translate="{{'pcApp.Socket.' + vm.placa.socket}}">{{vm.placa.socket}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.almacenamiento">Almacenamiento</span></dt>
+        <dd>
+            <span>{{vm.placa.almacenamiento}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.bios">Bios</span></dt>
+        <dd>
+            <span>{{vm.placa.bios}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.precio">Precio</span></dt>
+        <dd>
+            <span>{{vm.placa.precio}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.placa.fabricante">Fabricante</span></dt>
+        <dd>
+            <a ui-sref="fabricante-detail({id:vm.placa.fabricante.id})">{{vm.placa.fabricante.nombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="placa-detail.edit({id:vm.placa.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

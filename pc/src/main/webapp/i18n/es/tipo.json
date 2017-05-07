@@ -1,0 +1,18 @@
+{
+    "pcApp": {
+        "Tipo" : {
+            "null": "",
+            "AX": "AX",
+            "AT": "AT",
+            "BABYAT": "BABYAT",
+            "ATX": "ATX",
+            "FLEXATX": "FLEXATX",
+            "MICROATX": "MICROATX",
+            "MINIATX": "MINIATX",
+            "ITX": "ITX",
+            "BTX": "BTX",
+            "MICROBTX": "MICROBTX",
+            "FULLDTX": "FULLDTX"
+        }
+    }
+}

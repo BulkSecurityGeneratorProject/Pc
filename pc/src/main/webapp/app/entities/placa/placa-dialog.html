@@ -1,0 +1,99 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPlacaLabel" data-translate="pcApp.placa.home.createOrEditLabel">Create or edit a Placa</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.placa.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.placa.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.nombre" for="field_nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="field_nombre"
+                    ng-model="vm.placa.nombre"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.tipo" for="field_tipo">Tipo</label>
+            <select class="form-control" name="tipo" ng-model="vm.placa.tipo" id="field_tipo">
+                <option value="AX" data-translate="pcApp.Tipo.AX">AX</option>
+                <option value="AT" data-translate="pcApp.Tipo.AT">AT</option>
+                <option value="BABYAT" data-translate="pcApp.Tipo.BABYAT">BABYAT</option>
+                <option value="ATX" data-translate="pcApp.Tipo.ATX">ATX</option>
+                <option value="FLEXATX" data-translate="pcApp.Tipo.FLEXATX">FLEXATX</option>
+                <option value="MICROATX" data-translate="pcApp.Tipo.MICROATX">MICROATX</option>
+                <option value="MINIATX" data-translate="pcApp.Tipo.MINIATX">MINIATX</option>
+                <option value="ITX" data-translate="pcApp.Tipo.ITX">ITX</option>
+                <option value="BTX" data-translate="pcApp.Tipo.BTX">BTX</option>
+                <option value="MICROBTX" data-translate="pcApp.Tipo.MICROBTX">MICROBTX</option>
+                <option value="FULLDTX" data-translate="pcApp.Tipo.FULLDTX">FULLDTX</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.procesadores" for="field_procesadores">Procesadores</label>
+            <input type="text" class="form-control" name="procesadores" id="field_procesadores"
+                    ng-model="vm.placa.procesadores"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.memoria" for="field_memoria">Memoria</label>
+            <input type="text" class="form-control" name="memoria" id="field_memoria"
+                    ng-model="vm.placa.memoria"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.pci" for="field_pci">Pci</label>
+            <input type="text" class="form-control" name="pci" id="field_pci"
+                    ng-model="vm.placa.pci"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.socket" for="field_socket">Socket</label>
+            <select class="form-control" name="socket" ng-model="vm.placa.socket" id="field_socket">
+                <option value="LGA1156" data-translate="pcApp.Socket.LGA1156">LGA1156</option>
+                <option value="LGA1366" data-translate="pcApp.Socket.LGA1366">LGA1366</option>
+                <option value="AMD" data-translate="pcApp.Socket.AMD">AMD</option>
+                <option value="AM2" data-translate="pcApp.Socket.AM2">AM2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.almacenamiento" for="field_almacenamiento">Almacenamiento</label>
+            <input type="text" class="form-control" name="almacenamiento" id="field_almacenamiento"
+                    ng-model="vm.placa.almacenamiento"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.bios" for="field_bios">Bios</label>
+            <input type="text" class="form-control" name="bios" id="field_bios"
+                    ng-model="vm.placa.bios"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="pcApp.placa.precio" for="field_precio">Precio</label>
+            <input type="number" class="form-control" name="precio" id="field_precio"
+                    ng-model="vm.placa.precio"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="pcApp.placa.fabricante" for="field_fabricante">Fabricante</label>
+            <select class="form-control" id="field_fabricante" name="fabricante" ng-model="vm.placa.fabricante" ng-options="fabricante as fabricante.nombre for fabricante in vm.fabricantes track by fabricante.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

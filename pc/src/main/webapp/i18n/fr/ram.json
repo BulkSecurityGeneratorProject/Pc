@@ -1,0 +1,31 @@
+{
+    "pcApp": {
+        "ram" : {
+            "home": {
+                "title": "Rams",
+                "createLabel": "Créer un nouveau Ram",
+                "createOrEditLabel": "Créer ou éditer un Ram"
+            },
+            "created": "Un nouveau Ram a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Ram avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Ram avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Ram {{ id }} ?"
+            },
+            "detail": {
+                "title": "Ram"
+            },
+            "nombre": "Nombre",
+            "capacidad": "Capacidad",
+            "anchoDanda": "Ancho Danda",
+            "frecuencia": "Frecuencia",
+            "tiempoAcceso": "Tiempo Acceso",
+            "latencia": "Latencia",
+            "conectores": "Conectores",
+            "zocalo": "Zocalo",
+            "precio": "Precio",
+            "ordenador": "Ordenador",
+            "fabricante": "Fabricante"
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ordenador",
+            "otherEntityName": "ordenador",
+            "otherEntityRelationshipName": "graficas"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fabricante",
+            "otherEntityName": "fabricante",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "salidas",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "refrigeracion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "compatibilidad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chipset",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valocidad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "memoria",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ramdac",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "streamProcesor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shaderClock",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pixelRate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shaderModel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "precio",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170507160600",
+    "entityTableName": "graficas",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

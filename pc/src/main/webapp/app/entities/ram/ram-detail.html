@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span data-translate="pcApp.ram.detail.title">Ram</span> {{vm.ram.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="pcApp.ram.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.ram.nombre}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.capacidad">Capacidad</span></dt>
+        <dd>
+            <span>{{vm.ram.capacidad}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.anchoDanda">Ancho Danda</span></dt>
+        <dd>
+            <span>{{vm.ram.anchoDanda}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.frecuencia">Frecuencia</span></dt>
+        <dd>
+            <span>{{vm.ram.frecuencia}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.tiempoAcceso">Tiempo Acceso</span></dt>
+        <dd>
+            <span>{{vm.ram.tiempoAcceso}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.latencia">Latencia</span></dt>
+        <dd>
+            <span>{{vm.ram.latencia}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.conectores">Conectores</span></dt>
+        <dd>
+            <span>{{vm.ram.conectores}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.zocalo">Zocalo</span></dt>
+        <dd>
+            <span data-translate="{{'pcApp.Zocalo.' + vm.ram.zocalo}}">{{vm.ram.zocalo}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.precio">Precio</span></dt>
+        <dd>
+            <span>{{vm.ram.precio}}</span>
+        </dd>
+        <dt><span data-translate="pcApp.ram.fabricante">Fabricante</span></dt>
+        <dd>
+            <a ui-sref="fabricante-detail({id:vm.ram.fabricante.id})">{{vm.ram.fabricante.nombre}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="ram-detail.edit({id:vm.ram.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
